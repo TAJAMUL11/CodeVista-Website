@@ -682,6 +682,9 @@ header #nav-links{
     
 
   }
+  #nav-links.active{
+    display:flex;
+}
   header #MenuIcon{
     display: block;
     cursor: pointer;
@@ -726,9 +729,6 @@ header #nav-links{
   .offer-layer p{
     font-size: 1.5rem;
   }
-  #testimonials{
-    min-height: 100vh;
-  }
   #testimonials .swiper{
     padding: 2%;
   }
@@ -741,7 +741,7 @@ header #nav-links{
     font-size: 108%;
 }
 .footerLogo .Flogo{
-  width: 200px;
+  width: 180px;
 
 }
 #footer .footerNav{
@@ -780,6 +780,10 @@ header #nav-links{
   }
   .offer-layer p{
     font-size: 1.2rem;
+  }
+  .footerRights p{
+    font-size: 0.98rem;
+
   }
 
 }
