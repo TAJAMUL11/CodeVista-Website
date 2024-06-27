@@ -17,26 +17,8 @@
   font-family: "Poppins", sans-serif;
 }
 
-.btn {
-  padding: 0.75rem 2rem;
-  font-size: 1rem;
-  color: var(--Text_color_Dark);
-  background-color: var(--Text_color_Light);
-  outline: none;
-  border: none;
-  border-radius: 5rem;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background-color: var(--Text_color_Dark);
-}
-
-
 img {
   display: block;
-  width: 100%;
 }
 
 a {
@@ -62,10 +44,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  backdrop-filter: blur(2px);  
+  backdrop-filter: blur(2px); 
 }
 header.sticky{
-  padding: 0.8% 1.8%;
+  padding: 1.2% 2.4%;
   background-color: var(--Text_color_Light);
   box-shadow: 0 0 0.4rem #000;
   
@@ -74,12 +56,10 @@ header #MenuIcon{
   font-size: 2rem;
   display: none;
 }
-header .header__logo{
-  width: 170px;
-  cursor: pointer;
-}
+
 .header__logo .logo{
-  width: 100%;
+  width: 160px;
+  cursor: pointer;
   height: auto;
   object-fit: contain;
   animation: colorChange 0.5s ease-in-out infinite;
@@ -128,23 +108,6 @@ header #nav-links{
 #nav-links a:active{
   color: var(--Text_color_Dark);
 }
-#nav-links #signin{
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: var(--Text_color_Light);
-  background-color: var(--btn-color);
-  box-shadow: 0 0 0.7rem var(--btn-color);
-  padding: 0.7rem;
-  border-radius: var(--Border-radius);
-  transition: 0.3s ease-in-out;
-}
-#nav-links #signin:hover::after{
-  width: 0;
-}
-#nav-links #signin:hover,
-#nav-links #signin:focus{
-  box-shadow: none;
-}
 
 /* homepage design*/
 
@@ -162,10 +125,10 @@ header #nav-links{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 1.5rem 0;
 }
 
 .home__container h1, #wrap {
-  margin-bottom: 1rem;
   font-size: 4.1rem;
   font-weight: 600;
   color: var(--Text_color_Dark);
@@ -178,7 +141,6 @@ header #nav-links{
 .home__container p {
   width: 50%;
   margin-inline: auto;
-  margin-bottom: 3rem;
   font-size: 1.3rem;
   font-weight: 500;
   color: var(--Text_color_Dark);
@@ -204,6 +166,17 @@ header #nav-links{
   box-shadow: none;
 }
 
+#home .whatsApp{
+  position: fixed;
+  right: 0;
+  bottom: 15%;
+  z-index: 99;
+}
+.whatsApp a{
+  font-size: 4rem;
+  color: green;
+  cursor: pointer;
+}
 
 /*======================== Choose section=============================*/
 
@@ -290,7 +263,10 @@ header #nav-links{
 #offer .offer_heading{
   color: var(--Text_color_Dark);
   margin-bottom: .6rem;
-  font-size: 3rem;
+  font-size: 3.1rem;
+}
+#offer .offer__content{
+  margin-bottom: 2rem;
 }
 
 #offer .offer__content p{
@@ -298,17 +274,15 @@ header #nav-links{
   margin-bottom: 1rem;
 }
 
-.offer__content .btn{
-  margin-bottom: 1.3rem ;
+.offer__content .exlporeBtn{
   background-color: var(--btn-color);
   color: var(--Text_color_Light);
   font-weight: 700;
   box-shadow: 0 0 0.7rem var(--btn-color);
   transition: all 0.3s ease-in-out;
-}
-.offer__content .btn:hover,
-.offer__content .btn:focus{
-  transform: scale(0.95);
+  padding: 0.75rem 2rem;
+  border-radius: var(--Border-radius);
+  transition: all 0.3s ease-in-out;
 }
 
 .offer-container{
@@ -316,6 +290,7 @@ header #nav-links{
   grid-template-columns: repeat(3, auto);
   align-items: center;
   gap: 2.5rem;
+  padding: 1.5% 1%;
 
 }
 .offer-container .offer-box{
@@ -384,13 +359,14 @@ header #nav-links{
 /* =================================Testimonial section================================*/
 #testimonials{
   max-height: 100vh;
+  max-width: 100%;
   text-align: center;
-  padding: 2% 1.7%;
   background-color: var(--Text_color_Light);
   background-image: url(./assets/Testimony.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  overflow-x: hidden;
 
 }
 #testimonials h2{
@@ -399,11 +375,11 @@ header #nav-links{
   color: var(--Text_color_Dark);
 }
 #testimonials .swiper{
-  max-width: 1200px;
+  max-width: 1000px;
+  max-height: 100%;
   border-radius: 10px;
-  max-height: 600px;
-  background-color: #f5f0f02f;
-  backdrop-filter: blur(4px);
+  background-color: #f5f0f00e;
+  backdrop-filter: blur(5px);
 }
 .swiper .swiper-slide{
   display: flex;
@@ -437,7 +413,7 @@ header #nav-links{
   display: grid;
   grid-template-columns: repeat(4, auto);
   gap: 1rem;
-  border-top: 1px inset var(--Text_color_Dark)
+  border-top: 1px inset var(--Text_color_Dark);
 }
 #footer .footerNav{
   display: flex;
@@ -646,10 +622,7 @@ header #nav-links{
   #nav-links a{
     font-size: 1.05rem;
   }
-  #nav-links #signin{
-    padding: 0.5rem;
-    font-size: 1.05rem;
-  }
+
   .home__container p {
     font-size: 1.1rem;
     width: 85%;
@@ -662,10 +635,8 @@ header #nav-links{
     padding: 3%;
   }
   header.sticky{
-    padding: 2.7%;
-    
+    padding: 3.1%;
   }
-
   header #nav-links{
     position: absolute;
     top: 100%;
@@ -689,15 +660,20 @@ header #nav-links{
     display: block;
     cursor: pointer;
   }
+ 
 
   #nav-links a{
     margin: 1.5rem 0;
     font-size: 1.3rem;
   }
+
   .choose__content p{
     width: 80%;
   }
-  
+  .whatsApp a{
+    font-size: 3.6rem;
+  }
+
 
 }
 
@@ -729,9 +705,7 @@ header #nav-links{
   .offer-layer p{
     font-size: 1.5rem;
   }
-  #testimonials .swiper{
-    padding: 2%;
-  }
+
   .swiper-slide p{
     width: 100%;
     line-height: 1.7;
@@ -741,7 +715,7 @@ header #nav-links{
     font-size: 108%;
 }
 .footerLogo .Flogo{
-  width: 180px;
+  width: 170px;
 
 }
 #footer .footerNav{
@@ -760,6 +734,9 @@ header #nav-links{
 @media screen and (max-width: 525px){
   html{
     font-size: 86%;
+  }
+  .whatsApp a{
+    font-size: 3.2rem;
   }
   .home__container h1, #wrap {
     font-size: 2.7rem;
