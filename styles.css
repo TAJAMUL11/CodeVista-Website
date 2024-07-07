@@ -29,6 +29,7 @@ html,
 body {
   scroll-behavior: smooth;
   scroll-padding: 5rem;
+  overflow-x: hidden;
 }
 
 /* header */
@@ -45,6 +46,7 @@ header {
   justify-content: space-between;
   align-items: center;
   backdrop-filter: blur(2px); 
+  
 }
 header.sticky{
   padding: 1.2% 2.4%;
@@ -119,6 +121,7 @@ header #nav-links{
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
+  width: 100%;
   text-align: center;
   color: var(--Text_color_Dark);
   display: flex;
@@ -155,7 +158,7 @@ header #nav-links{
   font-weight: 600;
   color: var(--Text_color_Light);
   background-color: var(--btn-color);
-  box-shadow: 0 0.1rem 0.9rem var(--btn-color);
+  box-shadow: 0 0 0.5rem var(--btn-color);
   cursor: pointer;
   border-radius: var(--Border-radius);;
   transition: all 0.4s ease-in-out;
@@ -181,6 +184,7 @@ header #nav-links{
 /*======================== Choose section=============================*/
 
 .choose__container {
+  min-height: 100vh;
   position: relative;
   display: grid;
   text-align: center;
@@ -198,12 +202,12 @@ header #nav-links{
 }
 .choose__content p{
   margin-bottom: 1.5rem;
-  width: 50%;
+  width: 40%;
   margin: 0 auto;
   font-size: 1.02rem;
 }
 
-.choose__grid {
+#choose .choose__grid {
   display: grid;
   grid-template-columns: repeat(3, auto);
   gap: 2rem 0.7rem;
@@ -252,40 +256,45 @@ header #nav-links{
 #offer{
   min-height: 100vh;
   text-align: center;
-  padding: 2rem 1.5rem;
+  padding: 2%;
   background-color: var(--Text_color_Light);
   background-image:url("assets/OfferBackG.jpg");
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat; 
-}
-
-#offer .offer_heading{
-  color: var(--Text_color_Dark);
-  margin-bottom: .6rem;
-  font-size: 3.1rem;
+  background-repeat: no-repeat;
+  
 }
 #offer .offer__content{
-  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-around;
+  gap: 0.7rem 0;
+  align-items: center;
+  flex-direction: column;
 }
 
-#offer .offer__content p{
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
+.offer__content .offer_heading{
+  font-size: 3.3rem;
+  color: var(--Text_color_Dark);
 }
-
-.offer__content .exlporeBtn{
-  background-color: var(--btn-color);
+.offer__content p{
+  color: var(--Text_color_Dark);
+  margin: 0 auto;
+}
+.offer__content .apply{
   color: var(--Text_color_Light);
-  font-weight: 700;
-  box-shadow: 0 0 0.7rem var(--btn-color);
-  transition: all 0.3s ease-in-out;
-  padding: 0.75rem 2rem;
+  background-color: var(--btn-color);
+  padding: 1rem;
   border-radius: var(--Border-radius);
-  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 0.5rem var(--btn-color);
+  transition: all 0.5s ease-in-out;
+}
+.offer__content .apply:hover,
+.offer__content .apply:focus{
+  box-shadow: none;
+  transform: scale(95%);
 }
 
-.offer-container{
+#offer .offer-wrapper{
   display: grid;
   grid-template-columns: repeat(3, auto);
   align-items: center;
@@ -293,7 +302,7 @@ header #nav-links{
   padding: 1.5% 1%;
 
 }
-.offer-container .offer-box{
+.offer-wrapper .offer-box{
   position: relative;
   border-radius: 2rem;
   overflow: hidden;
@@ -358,16 +367,16 @@ header #nav-links{
 
 /* =================================Testimonial section================================*/
 #testimonials{
+  max-width: 120%;
   max-height: 100vh;
-  max-width: 100%;
+  overflow-x: hidden;
   text-align: center;
   background-color: var(--Text_color_Light);
   background-image: url(./assets/Testimony.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  overflow-x: hidden;
-
+  padding: 1.3rem;
 }
 #testimonials h2{
   font-size: 3rem;
@@ -375,25 +384,23 @@ header #nav-links{
   color: var(--Text_color_Dark);
 }
 #testimonials .swiper{
-  max-width: 1000px;
-  max-height: 100%;
-  border-radius: 10px;
-  background-color: #f5f0f00e;
-  backdrop-filter: blur(5px);
+  max-width: 1100px;
 }
-.swiper .swiper-slide{
+
+#testimonials .swiper-slide{
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
   gap: 0.7rem 0;
-
+  background-color: #f5f0f00e;
+  backdrop-filter: blur(5px);
   color: var(--Text_color_Dark);
   border-radius: 10px;
   
 }
 .swiper-slide p{
-  width: 70%;
+  width: 85%;
   line-height: 1.9;
   padding: 1rem;
   font-weight: 500;
@@ -404,6 +411,11 @@ header #nav-links{
   height: 90px;
   object-fit: contain;
   clip-path: circle(50%);
+}
+
+.swiper-slide h4{
+  padding: 0.8rem;
+  color: var(--Text_color_Dark);
 }
 
 /*============================Footer styles =================*/
@@ -609,10 +621,10 @@ header #nav-links{
   .home__container h1, #wrap {
     font-size: 3.4rem;
   }
-  .choose__grid {
+  #choose .choose__grid {
     grid-template-columns: repeat(2, auto);
   }
-  .offer-container{
+  #offer .offer-wrapper{
     grid-template-columns: repeat(2, auto);
   }
 
@@ -673,13 +685,11 @@ header #nav-links{
   .whatsApp a{
     font-size: 3.6rem;
   }
-
-
 }
 
 @media screen and (max-width: 637px){
   
-.choose__grid {
+  #choose .choose__grid {
     grid-template-columns: auto;
   }
   .choose__grid .choose__card{
@@ -696,7 +706,7 @@ header #nav-links{
     font-size: 1.1rem;
     line-height: 1.7;
   }
-.offer-container{
+  #offer .offer-wrapper{
     grid-template-columns: auto;
   }
   .offer-layer h4{
@@ -762,7 +772,6 @@ header #nav-links{
     font-size: 0.98rem;
 
   }
-
 }
 @media screen and (max-width: 385px){
   html{
