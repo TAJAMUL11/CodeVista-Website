@@ -407,8 +407,8 @@ header #nav-links{
   color: var(--Text_color_Dark);
 }
 .swiper-slide img{
-  width: 90px;
-  height: 90px;
+  width: 70px;
+  height: 70px;
   object-fit: contain;
   clip-path: circle(50%);
 }
