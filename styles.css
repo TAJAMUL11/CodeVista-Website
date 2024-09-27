@@ -120,7 +120,7 @@ header #nav-links{
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  height: 100vh;
   text-align: center;
   color: var(--Text_color_Dark);
   display: flex;
