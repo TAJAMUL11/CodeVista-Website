@@ -29,7 +29,7 @@ const swiper = new Swiper('.swiper',{
   effect: 'slide',
   loop: true,
   autoplay : {
-    delay : 2000,
+    delay : 2500,
   },
 })
 
