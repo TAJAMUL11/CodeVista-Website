@@ -1,7 +1,7 @@
 const MenuIcon = document.getElementById('MenuIcon');
 const header = document.getElementById("header");
 const navbar = document.getElementById("nav-links");
-console.log(header);
+
 window.addEventListener('scroll',() => {
   header.classList.toggle('sticky', window.scrollY > 5)
 })
@@ -19,7 +19,7 @@ ScrollReveal({
   delay : 200
 })
 
-ScrollReveal().reveal(' h1, .choose__card span, #testimonials h2 ', { origin: 'top' });
+ScrollReveal().reveal('.choose__card span, #testimonials h2 ', { origin: 'top' });
 ScrollReveal().reveal('.section__header, .offer_heading', { origin: 'left' });
 ScrollReveal().reveal('.footer__icons, .footer__container h4', { origin: 'right' });
 
@@ -29,7 +29,7 @@ const swiper = new Swiper('.swiper',{
   effect: 'slide',
   loop: true,
   autoplay : {
-    delay : 1500,
+    delay : 4000,
   },
 })
 
