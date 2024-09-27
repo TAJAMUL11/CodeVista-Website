@@ -15,11 +15,11 @@ MenuIcon.addEventListener('click', () => {
 ScrollReveal({
   reset : true,
   distance : '90px',
-  duration : 2000,
+  duration : 1000,
   delay : 200
 })
 
-ScrollReveal().reveal('.choose__card span, #testimonials h2 ', { origin: 'top' });
+ScrollReveal().reveal('h1, #wrap, .choose__card span, #testimonials h2 ', { origin: 'top' });
 ScrollReveal().reveal('.section__header, .offer_heading', { origin: 'left' });
 ScrollReveal().reveal('.footer__icons, .footer__container h4', { origin: 'right' });
 
@@ -29,7 +29,7 @@ const swiper = new Swiper('.swiper',{
   effect: 'slide',
   loop: true,
   autoplay : {
-    delay : 4000,
+    delay : 2000,
   },
 })
 
