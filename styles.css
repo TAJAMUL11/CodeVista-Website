@@ -191,7 +191,7 @@ header #nav-links{
   align-items: center;
   flex-direction: column;
   gap: 1rem 0;
-  background-image:url("assets/LinuxBg.png");
+  background-image: url(./assets/LinuxBg.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
