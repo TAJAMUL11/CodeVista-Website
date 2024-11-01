@@ -3,8 +3,27 @@ const header = document.getElementById("header");
 const navbar = document.getElementById("nav-links");
 
 window.addEventListener('scroll',() => {
-  header.classList.toggle('sticky', window.scrollY > 5)
+  header.classList.add('sticky', window.scrollY > 5)
 })
+window.addEventListener('scroll', () => {
+  const offerBoxes = document.querySelectorAll('.offer-box');
+
+  offerBoxes.forEach(box => {
+    const rect = box.getBoundingClientRect();
+    const viewportHeight = window.innerHeight;
+
+    // Check if the box is within a certain distance from the viewport
+    if (rect.top < viewportHeight * 1) {
+      box.classList.add('show-offer');
+
+      // After a delay, remove the 'show-offer' class to reset the animation
+      setTimeout(() => {
+        box.classList.remove('show-offer');
+      }, 2000); // Adjust the delay as needed
+    }
+  });
+});
+
 MenuIcon.addEventListener('click', () => {
   MenuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
