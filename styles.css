@@ -781,18 +781,21 @@ footer .toparrow{
 
   #home #one{
     flex-direction: column;
+    gap: 2rem 0;
   }
 
   #home #two{
     flex-direction: column;
+    gap: 2rem 0;
   }
 
   #home #three{
     flex-direction: column;
+    gap: 2rem 0;
   }
-  #one .homeContent{
+  /* #one .homeContent{
     margin-top: 5rem;
-  }
+  } */
   .homeContent .h1{
     font-size: 2.1rem;
     margin-top: 1rem;
@@ -802,9 +805,9 @@ footer .toparrow{
     font-size: 3.3rem;
     
   }
-  .Content-slide{
+  /* .Content-slide{
     margin-top: 5rem;
-  }
+  } */
  
   .Content-slide .n90{
     font-size: 3.3rem;
@@ -935,7 +938,7 @@ footer .toparrow{
   }
 
   .homeContent .cv{
-    font-size: 3rem;
+    font-size: 2.8rem;
     
   }
 
@@ -947,15 +950,15 @@ footer .toparrow{
     bottom: 19%;
   }
   .homeImage img{
-    width: 71vw;
+    width: 81vw;
   }
 
    .slide-image img{
-    width: 71vw;
+    width: 81vw;
   }
 
   #three .robot{
-    width: 71vw;
+    width: 81vw;
   }
 
 
