@@ -38,9 +38,9 @@ ScrollReveal({
   delay : 200
 })
 
-ScrollReveal().reveal('.h1, .cv, .choose__card span, #testimonials h2 ', { origin: 'top' });
+ScrollReveal().reveal('.choose__card span, #testimonials h2 ', { origin: 'top' });
 ScrollReveal().reveal('.section__header, .offer_heading', { origin: 'left' });
-ScrollReveal().reveal('.footer__icons, .footer__container h4, .pngHome', { origin: 'right' });
+ScrollReveal().reveal('.footer__icons, .footer__container h4', { origin: 'right' });
 
 /* Swiper Js*/
 
