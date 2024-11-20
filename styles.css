@@ -65,8 +65,30 @@ header #MenuIcon{
   cursor: pointer;
   height: auto;
   object-fit: contain;
-  animation: colorChange 0.5s ease-in-out infinite;
+  animation: colorChange 3s ease-in-out infinite;
   filter: contrast(200%) brightness(70%);
+}
+@keyframes colorChange {
+  0%{
+      filter: hue-rotate(0);
+     
+  }
+
+   33% {
+    filter: hue-rotate(180deg); 
+        
+   }
+   66% {
+    filter: hue-rotate(360deg); 
+        
+   }
+
+  
+  100% { 
+    filter: hue-rotate(0);
+      
+      
+   }
 }
 
 header #nav-links{
@@ -127,24 +149,8 @@ header #nav-links{
   justify-content: center;
   align-items: center;
   height: 100vh;
-  padding: 1.5rem;
+  padding: 0 1.5rem;
  
-}
-@keyframes floatIn {
-  0%{
-      transform: translateY(0);
-     
-  }
-
-   50% { 
-      transform: translateY(-1.5rem);  
-   }
-
-  
-  100% { 
-      transform: translateY(0);
-      
-   }
 }
 
 #one .homeContent{
@@ -206,7 +212,7 @@ header #nav-links{
   justify-content: center;
   align-items: center;
   height: 100vh;
-  padding: 1.5rem;
+  padding: 0 1.5rem;
  
  
 }
@@ -245,7 +251,7 @@ header #nav-links{
   justify-content: center;
   align-items: center;
   height: 100vh;
-  padding: 1.5rem;
+  padding: 0 1.5rem;
  
  
 }
@@ -302,7 +308,7 @@ header #nav-links{
 .choose__card span {
   display: inline-block;
   margin-bottom: 0.7rem;
-  padding: 5px 1rem;
+  padding: 7px 1rem;
   font-size: 2.6rem;
   background-color: var(--btn-color);
   border-radius: 50%;
@@ -440,8 +446,9 @@ header #nav-links{
 .offer-layer a{   
   display: inline-flex;
   justify-content: center;
+  font-size: 1.7rem;
   align-items: center;
-  padding: 1rem;
+  padding: 1.1rem;
   color: var(--Text_color_Light);
   background-color: var(--btn-color);
   border-radius: 50%;
@@ -528,7 +535,7 @@ header #nav-links{
 .footerLogo .Flogo{
   width: 160px;
   filter: contrast(200%) brightness(80%);
-  animation: colorChange 0.5s ease-in-out infinite;
+  animation: colorChange 3s ease-in-out infinite;;
   
 }
 
@@ -776,7 +783,7 @@ footer .toparrow{
 
   #nav-links a{
     margin: 1.4rem 0;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   #home #one{
@@ -817,15 +824,15 @@ footer .toparrow{
     font-size: 2.1rem;
   }
   .homeImage img{
-    width: 54vw;
+    width: 59vw;
   }
 
    .slide-image img{
-    width: 54vw;
+    width: 59vw;
   }
 
   #three .robot{
-    width: 54vw;
+    width: 59vw;
   }
 
 
@@ -903,7 +910,6 @@ footer .toparrow{
   html{
     font-size: 75%;
   }
-
   .choose__content p{
     width: 95%;
   }
@@ -918,26 +924,26 @@ footer .toparrow{
 
   }
   .homeImage img{
-    width: 65vw;
+    width: 67vw;
   }
 
    .slide-image img{
-    width: 65vw;
+    width: 67vw;
   }
 
   #three .robot{
-    width: 65vw;
+    width: 67vw;
   }
 
 
 }
 @media screen and (max-width: 475px){
   .homeContent .h1{
-    font-size: 2.2rem;
+    font-size: 2.25rem;
   }
 
   .homeContent .cv{
-    font-size: 2.8rem;
+    font-size: 2.9rem;
     
   }
 
@@ -949,15 +955,15 @@ footer .toparrow{
     bottom: 19%;
   }
   .homeImage img{
-    width: 81vw;
+    width: 85vw;
   }
 
    .slide-image img{
-    width: 81vw;
+    width: 85vw;
   }
 
   #three .robot{
-    width: 81vw;
+    width: 85vw;
   }
 
 
@@ -965,7 +971,7 @@ footer .toparrow{
 }
 @media screen and (max-width: 385px){
   html{
-    font-size: 60%;
+    font-size: 65%;
   }
 }
 
